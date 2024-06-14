@@ -1,0 +1,16 @@
+/* 
+RRUDENTAIL GLOBAL COLOUR SCHEME
+RED: #ea1e2e
+WHITE: #ffffff
+GREY: #e5eaef
+BLACK: #000000
+*/
+
+body {
+  overflow-x: hidden; /* Hidden or scrollable */
+  overflow-y: auto; /* Vertical scrolling */
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
+}
