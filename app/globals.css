@@ -1,28 +1,16 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/* 
+RRUDENTAIL GLOBAL COLOUR SCHEME
+RED: #ea1e2e
+WHITE: #ffffff
+GREY: #e5eaef
+BLACK: #000000
+*/
 
 body {
-  color: rgb(var(--foreground-rgb));
-  
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+  overflow-x: hidden; /* Hidden or scrollable */
+  overflow-y: auto; /* Vertical scrolling */
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #000000;
 }
