@@ -1,0 +1,17 @@
+.text {
+    text-align: center;
+}
+
+.top {
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
