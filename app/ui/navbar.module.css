@@ -1,0 +1,30 @@
+.navContainer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  background-color: #ea1e2e;
+  margin-top: 3rem;
+  width: 80%; 
+  border-radius: 0.5rem;
+  margin-left: auto; 
+  margin-right: auto;
+  transform: translateY(20px);
+  z-index: 1;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: center;
+  width: 100%; 
+}
+
+.navItem {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  font-weight: 700;
+  text-align: center; 
+}
+
+
