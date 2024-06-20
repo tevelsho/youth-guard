@@ -2,6 +2,7 @@
 
 import React from "react";
 import Navbar from "@/app/ui/navbar";
+import Chatbot from "@/app/chatbot/chatbot";
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <div>
           <Navbar />
           {children}
+            <Chatbot />
         </div>
       </body>
     </html>

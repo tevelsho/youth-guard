@@ -9,16 +9,25 @@ export default function Navbar() {
     <nav className={styles.navContainer}>
       <div className={styles.navLinks}>
         <Link className={styles.navItem} href="/">
-          Home
+          We Do
         </Link>
-        <Link className={styles.navItem} href="/about">
-          About us
+        <Link className={styles.navItem} href="/products">
+          Products
         </Link>
-        <Link className={styles.navItem} href="/insurance">
-          Insurance
+        <Link className={styles.navItem} href="/services">
+          Claims & Services
         </Link>
-        <Link className={styles.navItem} href="/community">
-          Community
+        <Link className={styles.navItem} href="/programmes">
+          Priority Programmes
+        </Link>
+        <Link className={styles.navItem} href="/collaboration">
+          Work With Us
+        </Link>
+        <Link className={styles.navItem} href="/planner">
+          Life Planner
+        </Link>
+        <Link className={styles.navItem} href="/aboutus">
+          About Us
         </Link>
       </div>
     </nav>
