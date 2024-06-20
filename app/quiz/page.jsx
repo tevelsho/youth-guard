@@ -1,44 +1,44 @@
 "use client";
-import React, { useRef, useState } from 'react'
-import { Box, Container, Grid, Paper, Typography } from '@mui/material';
-import './styles.css';
-import { BorderColor, Height } from '@mui/icons-material';
-import { pink } from '@mui/material/colors';
+import React, { useRef, useState } from "react"
+import { Box, Container, Grid, Paper, Typography } from "@mui/material";
+import "./styles.css";
+import { BorderColor, Height } from "@mui/icons-material";
+import { pink } from "@mui/material/colors";
 
 const data = [
   {
-    question: 'How many continents in Asia',
-    option1: '100',
-    option2: '83',
-    option3: '1',
+    question: "How many continents in Asia",
+    option1: "100",
+    option2: "83",
+    option3: "1",
     ans: 3,
   },
   {
-    question: 'Which continent has the most people',
-    option1: 'Europe',
-    option2: 'Oceania',
-    option3: 'Africa',
+    question: "Which continent has the most people",
+    option1: "Europe",
+    option2: "Oceania",
+    option3: "Africa",
     ans: 1,
   },
   {
-    question: 'When did running become a sport?',
-    option1: '888 BC',
-    option2: '776 BC',
-    option3: '5000 BC',
+    question: "When did running become a sport?",
+    option1: "888 BC",
+    option2: "776 BC",
+    option3: "5000 BC",
     ans: 2,
   },
   {
-    question: 'How often are roller coasters serviced?',
-    option1: 'every day',
-    option2: 'every month',
-    option3: 'every year',
+    question: "How often are roller coasters serviced?",
+    option1: "every day",
+    option2: "every month",
+    option3: "every year",
     ans: 1,
   },
   {
-    question: 'How many universities in singapore?',
-    option1: '3',
-    option2: '6',
-    option3: '9',
+    question: "How many universities in singapore?",
+    option1: "3",
+    option2: "6",
+    option3: "9",
     ans: 2,
   },
 ];
@@ -97,20 +97,20 @@ const gamepage = () =>{
       setResult(false);
     }
   return (
-    <Container style={{width: '100%', height: '500px', backgroundColor: 'pink', transform: 'translateY(200px)'}} className = "nospace">
-      <Typography variant='h3'style={{height: '80px', textAlign: 'center',}} className="centered">Prudential Quiz</Typography>
-      <Grid container direction="column" spacing={2} sx = {{width: '50%', margin: '0 auto'}}>
+    <Container style={{width: "100%", height: "500px", backgroundColor: "pink", transform: "translateY(200px)"}} className = "nospace">
+      <Typography variant="h3"style={{height: "80px", textAlign: "center",}} className="centered">Prudential Quiz</Typography>
+      <Grid container direction="column" spacing={2} sx = {{width: "50%", margin: "0 auto"}}>
 
       {result?<></>:<>
       <Grid item xs={12}>
-        <Typography id="question" variant="h5" style={{height: '75px', textAlign: 'left', display: 'flex', alignItems: 'end'}} >{index+1}. {question.question}</Typography>
+        <Typography id="question" variant="h5" style={{height: "75px", textAlign: "left", display: "flex", alignItems: "end"}} >{index+1}. {question.question}</Typography>
       </Grid>
       <Grid item xs={12}>
         <Box
           ref = {Option1}
           onClick={(e)=>{checkAns(e, 1)}}
           className="option"
-          sx={{ color: 'black', textAlign: 'left', }}
+          sx={{ color: "black", textAlign: "left", }}
         >
           {question.option1}
         </Box>
@@ -120,7 +120,7 @@ const gamepage = () =>{
           ref = {Option2}
           onClick={(e)=>{checkAns(e, 2)}}
           className="option"
-          sx={{ color: 'black', textAlign: 'left', }}
+          sx={{ color: "black", textAlign: "left", }}
         >
           {question.option2}
         </Box>
@@ -130,37 +130,37 @@ const gamepage = () =>{
           ref = {Option3}
           onClick={(e)=>{checkAns(e, 3)}}
           className="option"
-          sx={{ color: 'black', textAlign: 'left', }}
+          sx={{ color: "black", textAlign: "left", }}
         >
           {question.option3}
         </Box>
       </Grid>
       <Grid container item spacing={2} direction="row">
       <Grid item xs={3}>
-      <button onClick={next} className="button-19" role="button" display='flex'>Next</button>
+      <button onClick={next} className="button-19" role="button" display="flex">Next</button>
       </Grid>
       <Grid item xs={9}>
         <Box
           sx={{
-            width: '100%',
-            height: '20px',
-            borderRadius: '10px',
-            backgroundColor: 'white',
-            position: 'relative',
-            display: 'flex', 
-            alignItems: 'center',
-            justifyContent: 'center',
+            width: "100%",
+            height: "20px",
+            borderRadius: "10px",
+            backgroundColor: "white",
+            position: "relative",
+            display: "flex", 
+            alignItems: "center",
+            justifyContent: "center",
           }}
         >
           <Box
             sx={{
               width: `${((index) * (100/data.length)) % 100}%`,
-              height: '100%',
-              backgroundColor: 'lightblue',
-              position: 'absolute',
+              height: "100%",
+              backgroundColor: "lightblue",
+              position: "absolute",
               top: 0,
               left: 0,
-              borderRadius: '10px'
+              borderRadius: "10px"
             }}
           />
         </Box>
@@ -171,9 +171,9 @@ const gamepage = () =>{
     </>}
     {result?<>
       <Grid item xs={12}>
-        <div display = 'flex' justifyContent = 'center' textAlign='center'>You scored {score} out of {data.length}</div>
+        <div display = "flex" justifyContent = "center" textAlign="center">You scored {score} out of {data.length}</div>
       </Grid>    
-      <button onClick={reset} className="button-19" role="button" display='flex'>Reset</button></>:<></>}
+      <button onClick={reset} className="button-19" role="button" display="flex">Reset</button></>:<></>}
     </Grid>
     
 
