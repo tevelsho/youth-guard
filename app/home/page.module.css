@@ -19,6 +19,7 @@
   height: 50%;
   border-radius: 0.4rem;
   color: #fff; 
-  background-color: rgba(145, 145, 145, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.2rem; 
+  box-shadow: 20px;
 }

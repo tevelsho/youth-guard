@@ -4,17 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c23e34b-286f-494d-a4b2-7b1609f969d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/chatbot/chatbot.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/chatbot/chatbot.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/planner/page.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/planner/page.module.css" afterDir="false" />
+    <list default="true" id="1c23e34b-286f-494d-a4b2-7b1609f969d1" name="Changes" comment="feat: chatbot icon + life planner page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ui/navbar.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/navbar.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +14,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -71,12 +65,26 @@
       <workItem from="1718807402287" duration="539000" />
       <workItem from="1718841089762" duration="282000" />
       <workItem from="1718847003385" duration="264000" />
-      <workItem from="1718882241685" duration="2970000" />
+      <workItem from="1718882241685" duration="3949000" />
+      <workItem from="1718896740041" duration="690000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: chatbot icon + life planner page">
+      <option name="closed" value="true" />
+      <created>1718885572275</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718885572275</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: chatbot icon + life planner page" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: chatbot icon + life planner page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -84,7 +92,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app/layout.jsx</url>
           <line>2</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
