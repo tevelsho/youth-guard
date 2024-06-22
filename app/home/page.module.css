@@ -22,3 +22,15 @@
   background-color: rgba(145, 145, 145, 0.6);
   font-size: 1.2rem; 
 }
+.loginButton{
+  position: fixed;
+  top:20px;
+  right:200px;
+  color:darkblue;
+  background-color:white;
+  border-color:lightgray;
+  border-radius: 50%;
+  border-style:groove;
+  padding:5px 20px;
+ 
+}

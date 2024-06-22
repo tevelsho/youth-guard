@@ -4,6 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
+    <>
     <section className={styles.homeContainer}>
         <section className={styles.homePictures}>
           <Image
@@ -19,5 +20,11 @@ export default function Home() {
         
         </section>
     </section>
+    <a href ="/login">
+    <button className={styles.loginButton} type="button">
+      login
+    </button>
+    </a>
+    </>
   );
 }
