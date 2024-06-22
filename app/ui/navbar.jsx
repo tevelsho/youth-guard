@@ -26,6 +26,9 @@ export default function Navbar() {
         <Link className={styles.navItem} href="/planner">
           Life Planner
         </Link>
+        <Link className={styles.navItem} href="/planner">
+          Life Planner
+        </Link>
         <Link className={styles.navItem} href="/aboutus">
           About Us
         </Link>
