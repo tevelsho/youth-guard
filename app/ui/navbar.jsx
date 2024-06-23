@@ -3,6 +3,7 @@
 import React from "react";
 import styles from "./navbar.module.css";
 import Link from "next/link";
+import Image  from "next/image";
 
 export default function Navbar() {
   return (
@@ -10,24 +11,24 @@ export default function Navbar() {
     <nav className={styles.secondRow}>
             <div>
               <Link href="/home" className={styles.logo}>
-                put the prudential Logo here ig?
+              <Image src="/Prudential.png" width={125} height={100}/>
               </Link>
-            <Link href="#" className={styles.searchButton}>
-          Search
+            <Link href="/search" className={styles.searchButton}>
+            <Image src="/Search.png" width={25} height={25}/>
         </Link>
-            <Link href="#" className={styles.chatboxButton}>
-          [put chatbox png here i cant find one]
+            <Link href="/chat" className={styles.chatboxButton}>
+            <Image src="/Chatbox.png" width={25} height={25}/>
         </Link>
-            <Link href="#" className={styles.paymentButton}>
+            <Link href="/onlinePayment" className={styles.paymentButton}>
           Online Payment
         </Link>
-            <Link href="#" className={styles.rewardsButton}>
+            <Link href="/rewards" className={styles.rewardsButton}>
           Rewards
         </Link>
-            <Link href="#" className={styles.personalButton}>
+            <Link href="/personalMode" className={styles.personalButton}>
           Personal
         </Link>
-        <Link href="#" className={styles.enterpriseButton}>
+        <Link href="/enterpriseMode" className={styles.enterpriseButton}>
           Enterprise
         </Link>
         <Link href="/login" className={styles.loginButton}>

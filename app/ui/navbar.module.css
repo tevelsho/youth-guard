@@ -27,13 +27,15 @@
   text-align: center; 
 }
 .secondRow{
+  background-color: white;
   display: flex;
   position:relative;
   justify-content: flex-end;
   flex-direction:row;
   gap:30px;
   margin-top: 2rem;
-  width: 90%; 
+ margin-left:185px;
+  width: 80%; 
 }
 .loginButton{
   color:darkblue;
@@ -85,15 +87,23 @@
   margin-left:30px;
 }
 .chatboxButton{
-  color:darkblue;
+  position: relative;
+  top:7px;
   border-style:hidden;
   margin-left:30px;
 }
 .searchButton{
-  color:darkblue;
+  position:relative;
   border-style:hidden;
+  top:7px;
+  width:100%;
+  height: auto;
+  /*margin-right:30px;*/
 }
 .logo{
   position:fixed;
+  width:100%;
+  height: auto;
   left:190px;
+  top:0px;
 }
