@@ -3,7 +3,7 @@
   position: relative;
   justify-content: center;
   background-color: #ea1e2e;
-  margin-top: 3rem;
+  margin-top: 1rem;
   width: 80%; 
   border-radius: 0.5rem;
   margin-left: auto; 
@@ -26,5 +26,74 @@
   font-weight: 700;
   text-align: center; 
 }
-
-
+.secondRow{
+  display: flex;
+  position:relative;
+  justify-content: flex-end;
+  flex-direction:row;
+  gap:30px;
+  margin-top: 2rem;
+  width: 90%; 
+}
+.loginButton{
+  color:darkblue;
+  font:italic;
+  border-color: gray;
+  border-width:1px;
+  border-style:solid;
+  border-radius:32px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-left:20px;
+}
+.enterpriseButton{
+  color:rgb(102, 102, 151);
+  border-color: gray;
+  border-width:1px;
+  border-style:solid;
+  border-top-right-radius: 32px;
+  border-bottom-right-radius: 32px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-top:5px;
+  padding-bottom:5px;
+  background-color:lightgray;
+}
+.personalButton{
+  color:darkblue;
+  border-color: gray;
+  border-width:1px;
+  border-style:solid;
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  padding-left: 15px; 
+  padding-right:15px;
+  padding-top:5px;
+  padding-bottom:5px;
+  margin-left: 30px;
+}
+.rewardsButton{
+  color:darkblue;
+  border-style:hidden;
+  margin-left:30px;
+}
+.paymentButton{
+  color:darkblue;
+  border-style:hidden;
+  margin-left:30px;
+}
+.chatboxButton{
+  color:darkblue;
+  border-style:hidden;
+  margin-left:30px;
+}
+.searchButton{
+  color:darkblue;
+  border-style:hidden;
+}
+.logo{
+  position:fixed;
+  left:190px;
+}
