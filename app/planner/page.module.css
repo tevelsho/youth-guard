@@ -1,53 +1,64 @@
 .plannerContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-    padding-top: 100px;
-  }
-  
-  .game {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .rectangle {
-    width: 90%;
-    height: 650px;
-    background-color: #dfdfdf;
-    border-radius: 5px;
-    margin-top: 20px;
-  }
-  
-  .infoContainer {
-    display: flex;
-    justify-content: space-around;
-    width: 90%;
-    margin-top: 20px;
-  }
-  
-  .infoBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 30%;
-    background-color: #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    margin: 20px;
-  }
-  
-  .infoImage {
-    width: 100%;
-    height: auto;
-    border-radius: 5px 5px 0 0;
-  }
-  
-  .infoText {
-    padding: 10px;
-    text-align: center;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+}
+
+.game {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.rectangle {
+  width: 90%;
+  height: 650px;
+  background-color: #dfdfdf;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.infoContainer {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; /* Center the flex items */
+  width: 90%;
+  margin-top: 20px;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%; 
+  margin: 10px; 
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.infoBox:hover {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.infoImageContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+
+.infoImage {
+  object-fit: cover;
+}
+
+.infoText {
+  padding: 10px;
+  text-align: center;
+}

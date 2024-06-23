@@ -11,21 +11,36 @@ export default function Planner() {
 
             <section className={styles.infoContainer}>
                 <div className={styles.infoBox}>
-                    <Image src="/home.jpg" alt="Info 1" className={styles.infoImage} width={300} height={400} />
+                    <div className={styles.infoImageContainer}>
+                        <Image src="/policy.png" alt="policy" layout="fill" className={styles.infoImage} />
+                    </div>
                     <div className={styles.infoText}>
                         <h3>Test</h3>
                         <p>Some info</p>
                     </div>
                 </div>
                 <div className={styles.infoBox}>
-                    <Image src="/path/to/image2.png" alt="Info 2" className={styles.infoImage} width={300} height={200} />
+                    <div className={styles.infoImageContainer}>
+                        <Image src="/reco.jpg" alt="reco" layout="fill" className={styles.infoImage} />
+                    </div>
                     <div className={styles.infoText}>
                         <h3>Test</h3>
                         <p>Some info.</p>
                     </div>
                 </div>
                 <div className={styles.infoBox}>
-                    <Image src="/path/to/image3.png" alt="Info 3" className={styles.infoImage} width={300} height={200} />
+                    <div className={styles.infoImageContainer}>
+                        <Image src="/youthInsurance.jpg" alt="youth insurance" layout="fill" className={styles.infoImage} />
+                    </div>
+                    <div className={styles.infoText}>
+                        <h3>PRUPanel Connect</h3>
+                        <p>A suite of value-added services to make your healthcare journey simpler.</p>
+                    </div>
+                </div>
+                <div className={styles.infoBox}>
+                    <div className={styles.infoImageContainer}>
+                        <Image src="/howToInsurance.jpg" alt="how to insurance" layout="fill" className={styles.infoImage} />
+                    </div>
                     <div className={styles.infoText}>
                         <h3>PRUPanel Connect</h3>
                         <p>A suite of value-added services to make your healthcare journey simpler.</p>
@@ -33,9 +48,9 @@ export default function Planner() {
                 </div>
             </section>
 
-            <section className={styles.insuranceCalculator}>
+            <section className={styles.game}>
+                <div className={styles.rectangle}></div>
             </section>
         </section>
     );
 }
-
