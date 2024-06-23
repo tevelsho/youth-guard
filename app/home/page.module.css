@@ -23,3 +23,15 @@
   font-size: 1.2rem; 
   box-shadow: 20px;
 }
+.loginButton{
+  position: fixed;
+  top:20px;
+  right:200px;
+  color:darkblue;
+  background-color:white;
+  border-color:lightgray;
+  border-radius: 50%;
+  border-style:groove;
+  padding:5px 20px;
+ 
+}
