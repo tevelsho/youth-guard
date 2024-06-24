@@ -40,6 +40,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 10px;
   transition: box-shadow 0.3s ease;
+  text-decoration: none;
+  color: black;
 }
 
 .infoBox:hover {
@@ -178,3 +180,100 @@
   font-weight: bold;
 }
 
+.testHeader {
+  background-color: #FBE4E4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.testHeader h1 {
+  font-size: 3rem;
+}
+
+.testSteps {
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem 4rem;
+  gap: 2rem;
+}
+
+.testStep {
+  background-color: rgba(245, 245, 245, 0.75);
+  padding: 30px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+}
+
+.testStep h2 {
+  margin: 10px 0;
+}
+
+.testStep p {
+  margin: 0;
+}
+
+.testStepImg {
+  width: auto;
+  height: 50px;
+}
+
+.testContent {
+  text-align: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.testContent h2 {
+  margin: 10px 0;
+}
+
+.testContentBtns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.testContentTopic {
+  background-color: white;
+  border: 2px solid #F66477;
+  color: #F66477;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.testContentTopic:hover {
+  background-color: #F66477;
+  color: white;
+}
+
+.startTest {
+  font-weight: bold;
+  background-color: #F11834;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.startTest:hover {
+  background-color: #9C1425;
+}

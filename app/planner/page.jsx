@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import styles from "./page.module.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Planner() {
   const [age, setAge] = useState("");
@@ -43,24 +44,28 @@ export default function Planner() {
       </section>
 
             <section className={styles.infoContainer}>
-                <div className={styles.infoBox}>
+              <Link href="/planner/healthtest" className={styles.infoBox}>
+                <div>
                     <div className={styles.infoImageContainer}>
                         <Image src="/policy.png" alt="policy" layout="fill" className={styles.infoImage} />
                     </div>
                     <div className={styles.infoText}>
-                        <h3>Test</h3>
+                        <h3>Insurance Personality Test</h3>
                         <p>Some info</p>
                     </div>
                 </div>
-                <div className={styles.infoBox}>
+              </Link>
+              <Link href="/planner/insurancetest" className={styles.infoBox}>
+                <div>
                     <div className={styles.infoImageContainer}>
                         <Image src="/reco.jpg" alt="reco" layout="fill" className={styles.infoImage} />
                     </div>
                     <div className={styles.infoText}>
-                        <h3>Test</h3>
+                        <h3>Health Insurance Personality Test</h3>
                         <p>Some info.</p>
                     </div>
                 </div>
+              </Link>
                 <div className={styles.infoBox}>
                     <div className={styles.infoImageContainer}>
                         <Image src="/youthInsurance.jpg" alt="youth insurance" layout="fill" className={styles.infoImage} />
