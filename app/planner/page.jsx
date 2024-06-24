@@ -15,8 +15,8 @@ export default function Planner() {
                         <Image src="/policy.png" alt="policy" layout="fill" className={styles.infoImage} />
                     </div>
                     <div className={styles.infoText}>
-                        <h3>Test</h3>
-                        <p>Some info</p>
+                        <h3>Understanding Insurance Policies</h3>
+                        <p>Learn the basics of insurance policies to make informed decisions for your future.</p>
                     </div>
                 </div>
                 <div className={styles.infoBox}>
@@ -24,8 +24,8 @@ export default function Planner() {
                         <Image src="/reco.jpg" alt="reco" layout="fill" className={styles.infoImage} />
                     </div>
                     <div className={styles.infoText}>
-                        <h3>Test</h3>
-                        <p>Some info.</p>
+                        <h3>Best Insurance Stocks to Buy</h3>
+                        <p>Explore the top insurance stocks to invest in and maximize your financial growth.</p>
                     </div>
                 </div>
                 <div className={styles.infoBox}>
@@ -42,8 +42,8 @@ export default function Planner() {
                         <Image src="/howToInsurance.jpg" alt="how to insurance" layout="fill" className={styles.infoImage} />
                     </div>
                     <div className={styles.infoText}>
-                        <h3>PRUPanel Connect</h3>
-                        <p>A suite of value-added services to make your healthcare journey simpler.</p>
+                        <h3>Comprehensive Health Insurance Guide</h3>
+                        <p>An in-depth guide to understanding health insurance and choosing the right plan for you.</p>
                     </div>
                 </div>
             </section>
