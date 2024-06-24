@@ -42,77 +42,44 @@ export default function Planner() {
         <div className={styles.rectangle}></div>
       </section>
 
-      <section className={styles.infoContainer}>
-        <div className={styles.infoBox}>
-          <div className={styles.infoImageContainer}>
-            <Image
-              src="/policy.png"
-              alt="policy"
-              layout="fill"
-              className={styles.infoImage}
-            />
-          </div>
-          <div className={styles.infoText}>
-            <h3>Secure Your Life Early</h3>
-            <p>
-              Discover the importance of starting your insurance journey young.
-              Find out how our youth insurance plans can benefit you.
-            </p>
-          </div>
-        </div>
-        <div className={styles.infoBox}>
-          <div className={styles.infoImageContainer}>
-            <Image
-              src="/reco.jpg"
-              alt="reco"
-              layout="fill"
-              className={styles.infoImage}
-            />
-          </div>
-          <div className={styles.infoText}>
-            <h3>Best Insurance Stock of 2024</h3>
-            <p>
-              Explore the best insurance stocks of 2024 and learn how investing
-              today can secure your financial future.
-            </p>
-          </div>
-        </div>
-        <div className={styles.infoBox}>
-          <div className={styles.infoImageContainer}>
-            <Image
-              src="/youthInsurance.jpg"
-              alt="youth insurance"
-              layout="fill"
-              className={styles.infoImage}
-            />
-          </div>
-          <div className={styles.infoText}>
-            <h3>Finding Your Correct Insurance</h3>
-            <p>
-              Navigate through our suite of value-added services designed to
-              simplify your healthcare journey and find the perfect insurance
-              plan tailored to your needs.
-            </p>
-          </div>
-        </div>
-        <div className={styles.infoBox}>
-          <div className={styles.infoImageContainer}>
-            <Image
-              src="/howToInsurance.jpg"
-              alt="how to insurance"
-              layout="fill"
-              className={styles.infoImage}
-            />
-          </div>
-          <div className={styles.infoText}>
-            <h3>Insurance 101</h3>
-            <p>
-              New to insurance? This comprehensive guide breaks down everything
-              you need to know to get started.
-            </p>
-          </div>
-        </div>
-      </section>
+            <section className={styles.infoContainer}>
+                <div className={styles.infoBox}>
+                    <div className={styles.infoImageContainer}>
+                        <Image src="/policy.png" alt="policy" layout="fill" className={styles.infoImage} />
+                    </div>
+                    <div className={styles.infoText}>
+                        <h3>Test</h3>
+                        <p>Some info</p>
+                    </div>
+                </div>
+                <div className={styles.infoBox}>
+                    <div className={styles.infoImageContainer}>
+                        <Image src="/reco.jpg" alt="reco" layout="fill" className={styles.infoImage} />
+                    </div>
+                    <div className={styles.infoText}>
+                        <h3>Test</h3>
+                        <p>Some info.</p>
+                    </div>
+                </div>
+                <div className={styles.infoBox}>
+                    <div className={styles.infoImageContainer}>
+                        <Image src="/youthInsurance.jpg" alt="youth insurance" layout="fill" className={styles.infoImage} />
+                    </div>
+                    <div className={styles.infoText}>
+                        <h3>PRUPanel Connect</h3>
+                        <p>A suite of value-added services to make your healthcare journey simpler.</p>
+                    </div>
+                </div>
+                <div className={styles.infoBox}>
+                    <div className={styles.infoImageContainer}>
+                        <Image src="/howToInsurance.jpg" alt="how to insurance" layout="fill" className={styles.infoImage} />
+                    </div>
+                    <div className={styles.infoText}>
+                        <h3>PRUPanel Connect</h3>
+                        <p>A suite of value-added services to make your healthcare journey simpler.</p>
+                    </div>
+                </div>
+            </section>
 
       <section className={styles.calculatorContainer}>
         <h2 className={styles.calculatorTitle}>Insurance Premium Calculator</h2>
