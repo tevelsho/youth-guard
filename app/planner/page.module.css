@@ -62,3 +62,118 @@
   padding: 10px;
   text-align: center;
 }
+
+.calculatorContainer {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 80%;
+  background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.calculatorTitle {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.calculatorForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.calculatorInput,
+.calculatorSelect {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  transition: border-color 0.3s;
+}
+
+.calculatorInput:focus,
+.calculatorSelect:focus {
+  border-color: #ea1e2e;
+  outline: none;
+}
+
+.calculatorSelect {
+  appearance: none;
+  background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23333"%3E%3Cpath d="M7 10l5 5 5-5H7z"/%3E%3C/svg%3E') no-repeat right 0.75rem center/1.5rem;
+}
+
+.calculatorButton {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #ea1e2e;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.calculatorButton:hover {
+  background-color: #d81a26;
+}
+
+.calculatorResult {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (min-width: 768px) {
+  .calculatorForm {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .calculatorInput,
+  .calculatorSelect {
+    flex: 1 1 calc(50% - 1rem);
+    margin-right: 1rem;
+  }
+
+  .calculatorInput:last-of-type,
+  .calculatorSelect:last-of-type {
+    margin-right: 0;
+  }
+
+  .calculatorButton {
+    flex: 1 1 100%;
+  }
+}
+
+
+.calculatorSelect {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.25rem;
+}
+
+.calculatorButton {
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #ea1e2e;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.calculatorResult {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+}

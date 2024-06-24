@@ -16,12 +16,6 @@ export default function Home() {
           />
         </section>
         <section className={styles.homeInfo}></section>
-        
-        <a href="/login">
-        <button className={styles.loginButton} type="button">
-          login
-        </button>
-      </a>
       </section>
   );
 }
