@@ -8,10 +8,10 @@ const Chatbot = () => {
       id="chatbot-iframe"
       style={{
         position: "fixed",
-        bottom: "20px",
-        right: "20px",
+        bottom: "5px", 
+        right: "10px",
         width: "500px",
-        height: "650px",
+        height: "600px",
         border: "none",
         zIndex: 1000,
       }}
@@ -30,16 +30,16 @@ const Chatbot = () => {
     data-base-api-url="http://localhost:3001/api/embed"
     src="anythingllm-chat-widget.min.js"
     data-chat-icon="support"
-    data-user-bg-color="#F11834"
+    data-user-bg-color="#d3d3d3"
     data-assistant-bg-color="#FBE4E4"
-    data-greeting ='Hello, feel free to ask anything about Prudential products and services. I am here to help you with recommendations, comparisons, FAQs and more!'
+    data-greeting ='Ask Away!'
     data-assistant-name="Prudential Assistant"
     data-no-sponsor="true"
     data-brand-image-url="prudentialLogoOutline.png"
-    data-assistant-icon="prudentialLogo.png"
+    data-assistant-icon="chatbotGirl.png"
     data-support-email="customer.service@prudential.com.sg"
-    data-window-height="600px"
-    data-window-width="400px"
+    data-window-height="450px"
+    data-window-width="320px"
   ></script>    </body>
     </html>
   `}

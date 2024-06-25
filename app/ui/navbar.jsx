@@ -4,30 +4,29 @@ import React from "react";
 import styles from "./navbar.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { FaGift } from "react-icons/fa6";
-import { FaRegCreditCard } from "react-icons/fa";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import { MdChatBubbleOutline } from "react-icons/md";
+import { FaGift, FaRegCreditCard } from "react-icons/fa6";
 
 export default function Navbar() {
   return (
     <>
       <nav className={styles.secondRow}>
-        <div>
+        <div className={styles.logocontainer}>
           <Link href="/" className={styles.logocontainer}>
             <Image
               src="/prudential-logo-small.jpg"
               alt="Prudential Logo"
-              width={220} // Set a default width
+              width={220} 
               height={35}
               className={styles.logo}
             />
           </Link>
-          <Link href="/search" className={styles.searchButton}>
-            <Image src="/search.png" width={25} height={25} />
-          </Link>
-          <Link href="/chat" className={styles.chatboxButton}>
-            <Image src="/chatbox.png" width={25} height={25} />
-          </Link>
-          <FaRegCreditCard className={styles.giftIcon}/>
+        </div>
+        <div className={styles.iconLinkContainer}>
+          <FaMagnifyingGlass className={styles.searchButton} />
+          <MdChatBubbleOutline className={styles.chatboxButton} />
+          <FaRegCreditCard className={styles.giftIcon} />
           <Link href="/onlinePayment" className={`${styles.paymentButton} ${styles.topnavbarfont}`}>
             Online Payment
           </Link>
@@ -35,12 +34,14 @@ export default function Navbar() {
           <Link href="/rewards" className={`${styles.rewardsButton} ${styles.topnavbarfont}`}>
             Rewards
           </Link>
-          <Link href="/personalMode" className={`${styles.personalButton} ${styles.topnavbarfont}`}>
-            Personal
-          </Link>
-          <Link href="/enterpriseMode" className={`${styles.enterpriseButton} ${styles.topnavbarfont}`}>
-            Enterprise
-          </Link>
+          <div className={styles.personalEnterpriseContainer}>
+            <Link href="/personalMode" className={`${styles.personalButton} ${styles.topnavbarfont}`}>
+              Personal
+            </Link>
+            <Link href="/enterpriseMode" className={`${styles.enterpriseButton} ${styles.topnavbarfont}`}>
+              Enterprise
+            </Link>
+          </div>
           <Link href="/login" className={`${styles.loginButton} ${styles.topnavbarfont}`}>
             Login
           </Link>
@@ -74,3 +75,4 @@ export default function Navbar() {
     </>
   );
 }
+

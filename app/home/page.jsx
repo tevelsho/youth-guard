@@ -7,7 +7,7 @@ export default function Home() {
       <section className={styles.homeContainer}>
         <section className={styles.homePictures}>
           <Image
-            src="/home.jpg"
+            src="/banner.webp"
             layout="responsive"
             width={1500}
             height={1000}

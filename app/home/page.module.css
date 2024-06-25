@@ -19,7 +19,7 @@
   height: 50%;
   border-radius: 0.4rem;
   color: #fff; 
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   font-size: 1.2rem; 
   box-shadow: 20px;
 }
@@ -34,5 +34,4 @@
   border-radius: 50%;
   border-style:groove;
   padding:5px 20px;
- 
 }
