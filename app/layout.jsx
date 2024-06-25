@@ -3,6 +3,7 @@
 import React from "react";
 import Navbar from "@/app/ui/navbar";
 import "./globals.css";
+import Chatbot from "@/app/chatbot/chatbot";
 
 export default function RootLayout({ children }) {
   return (
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         <div>
           <Navbar />
           {children}
+            <Chatbot />
         </div>
       </body>
     </html>
