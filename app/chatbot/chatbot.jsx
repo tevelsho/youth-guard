@@ -4,11 +4,11 @@ import React, { useEffect } from "react";
 
 const Chatbot = () => {
   return (
-    <iframe
+    <iframe //iframe as chatbot script affects global css values
       id="chatbot-iframe"
       style={{
         position: "fixed",
-        bottom: "5px", 
+        bottom: "5px",
         right: "10px",
         width: "500px",
         height: "600px",
@@ -26,10 +26,11 @@ const Chatbot = () => {
     <body>
       <div id="custom-chat-widget"></div>
   <script
-    data-embed-id="fbaf448a-03fa-4a10-9555-7e5cd8667675"
-    data-base-api-url="http://localhost:3001/api/embed"
+  
+    data-embed-id="107e568a-e7bf-4a8b-a400-4411fe5cd743"
+    data-base-api-url="to be replaced with url of hosted anythingllm instance"
     src="anythingllm-chat-widget.min.js"
-    data-chat-icon="support"
+    data-chat-icon="chatBubble"
     data-user-bg-color="#d3d3d3"
     data-assistant-bg-color="#FBE4E4"
     data-greeting ='Ask Away!'
@@ -43,8 +44,6 @@ const Chatbot = () => {
   ></script>    </body>
     </html>
   `}
-
-      // Use the imported srcDoc content
     />
   );
 };
