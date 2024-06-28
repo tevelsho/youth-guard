@@ -66,6 +66,8 @@
 }
 
 .calculatorContainer {
+  position: relative;
+  right: 30%;
   align-self: flex-start;
   margin: 2rem auto;
   padding: 2rem;
