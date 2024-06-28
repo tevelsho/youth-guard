@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Navbar from "@/app/ui/navbar";
 import Chatbot from "@/app/chatbot/chatbot";
@@ -20,7 +18,8 @@ export default function RootLayout({ children }) {
         <div>
           <Navbar />
           {children}
-            <Chatbot />
+          <Chatbot />
+          <Footer className="footer" />
         </div>
       </body>
     </html>
