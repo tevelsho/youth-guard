@@ -17,9 +17,9 @@ export default function RootLayout({ children }) {
         <div>
           <Navbar />
           {children}
-          <Chatbot/>
+          <Chatbot />
         </div>
-        <Footer/>
+        <Footer className="footer" />
       </body>
     </html>
   );
