@@ -4,6 +4,7 @@
 
 .homePictures {
   position: relative; 
+  margin-bottom: 50rem;
 }
 
 .picture {
@@ -19,7 +20,7 @@
   height: 50%;
   border-radius: 0.4rem;
   color: #fff; 
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255);
   font-size: 1.2rem; 
   box-shadow: 20px;
 }

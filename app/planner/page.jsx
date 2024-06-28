@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { CSSTransition } from "react-transition-group";
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,17 +12,31 @@ export default function Planner() {
   const [duration, setDuration] = useState("");
   const [smokingStatus, setSmokingStatus] = useState("");
   const [healthStatus, setHealthStatus] = useState("");
+  const [insuranceType, setInsuranceType] = useState("");
+  const [insurancePlan, setInsurancePlan] = useState("");
   const [premium, setPremium] = useState(null);
 
   const calculatePremium = () => {
-    if (age && coverage && duration && smokingStatus && healthStatus) {
-      const basePremium = 100; // Example base premium
+    if (
+      age &&
+      coverage &&
+      duration &&
+      smokingStatus &&
+      healthStatus &&
+      insuranceType &&
+      insurancePlan
+    ) {
+      const basePremium = 100;
       const ageFactor = age * 1.5;
       const coverageFactor = coverage / 1000;
       const durationFactor = duration * 0.1;
       const smokingFactor = smokingStatus === "smoker" ? 200 : 0;
       const healthFactor =
-        healthStatus === "poor" ? 150 : healthStatus === "average" ? 100 : 50;
+        healthStatus === "poor"
+          ? 150
+          : healthStatus === "average"
+          ? 100
+          : 50;
 
       const estimatedPremium =
         basePremium +
@@ -43,51 +58,57 @@ export default function Planner() {
         <div className={styles.rectangle}></div>
       </section>
 
-            <section className={styles.infoContainer}>
-              <Link href="/planner/healthtest" className={styles.infoBox}>
-                <div>
-                    <div className={styles.infoImageContainer}>
-                        <Image src="/policy.png" alt="policy" layout="fill" className={styles.infoImage} />
-                    </div>
-                    <div className={styles.infoText}>
-                        <h3>Insurance Personality Test</h3>
-                        <p>Some info</p>
-                    </div>
-                </div>
-              </Link>
-              <Link href="/planner/insurancetest" className={styles.infoBox}>
-                <div>
-                    <div className={styles.infoImageContainer}>
-                        <Image src="/reco.jpg" alt="reco" layout="fill" className={styles.infoImage} />
-                    </div>
-                    <div className={styles.infoText}>
-                        <h3>Health Insurance Personality Test</h3>
-                        <p>Some info.</p>
-                    </div>
-                </div>
-              </Link>
-                <div className={styles.infoBox}>
-                    <div className={styles.infoImageContainer}>
-                        <Image src="/youthInsurance.jpg" alt="youth insurance" layout="fill" className={styles.infoImage} />
-                    </div>
-                    <div className={styles.infoText}>
-                        <h3>PRUPanel Connect</h3>
-                        <p>A suite of value-added services to make your healthcare journey simpler.</p>
-                    </div>
-                </div>
-                <div className={styles.infoBox}>
-                    <div className={styles.infoImageContainer}>
-                        <Image src="/howToInsurance.jpg" alt="how to insurance" layout="fill" className={styles.infoImage} />
-                    </div>
-                    <div className={styles.infoText}>
-                        <h3>PRUPanel Connect</h3>
-                        <p>A suite of value-added services to make your healthcare journey simpler.</p>
-                    </div>
-                </div>
-            </section>
+      <section className={styles.infoContainer}>
+        <Link href="/planner/healthtest" className={styles.infoBox}>
+          <div>
+            <div className={styles.infoImageContainer}>
+              <Image
+                src="/personality.png"
+                alt="policy"
+                layout="fill"
+                className={styles.infoImage}
+              />
+            </div>
+            <div className={styles.infoText}>
+              <h3>Insurance Personality Test</h3>
+              <p>Some info</p>
+            </div>
+          </div>
+        </Link>
+        <Link href="/planner/insurancetest" className={styles.infoBox}>
+          <div>
+            <div className={styles.infoImageContainer}>
+              <Image
+                src="/health.jpg"
+                alt="reco"
+                layout="fill"
+                className={styles.infoImage}
+              />
+            </div>
+            <div className={styles.infoText}>
+              <h3>Health Insurance Personality Test</h3>
+              <p>Some info.</p>
+            </div>
+          </div>
+        </Link>
+        <div className={styles.infoBox}>
+          <div className={styles.infoImageContainer}>
+            <Image
+              src="/youthInsurance.jpg"
+              alt="youth insurance"
+              layout="fill"
+              className={styles.infoImage}
+            />
+          </div>
+          <div className={styles.infoText}>
+            <h3>PRUPanel Connect</h3>
+            <p>A suite of value-added services to make your healthcare journey simpler.</p>
+          </div>
+        </div>
+      </section>
 
       <section className={styles.calculatorContainer}>
-        <h2 className={styles.calculatorTitle}>Insurance Premium Calculator</h2>
+        <h2 className={styles.calculatorTitle}>Insurance Calculator</h2>
         <div className={styles.calculatorForm}>
           <input
             type="number"
@@ -129,19 +150,52 @@ export default function Planner() {
             <option value="average">Average</option>
             <option value="good">Good</option>
           </select>
-          <button
-            onClick={calculatePremium}
-            className={styles.calculatorButton}
+          <select
+            className={styles.calculatorSelect}
+            value={insuranceType}
+            onChange={(e) => setInsuranceType(e.target.value)}
           >
+            <option value="">Choose Insurance Type</option>
+            <option value="medical">Medical</option>
+            <option value="accident">Accident</option>
+            <option value="critical">Critical Illness</option>
+            <option value="dengue">Dengue</option>
+            <option value="covid">COVID Vaccination Coverage</option>
+          </select>
+          <CSSTransition
+            in={!!insuranceType}
+            timeout={300}
+            classNames={{
+              enter: styles.fadeEnter,
+              enterActive: styles.fadeEnterActive,
+              exit: styles.fadeExit,
+              exitActive: styles.fadeExitActive,
+            }}
+            unmountOnExit
+          >
+            <select
+              className={styles.calculatorSelect}
+              value={insurancePlan}
+              onChange={(e) => setInsurancePlan(e.target.value)}
+            >
+              <option value="">Choose Insurance Plan</option>
+              <option value="poor">Poor</option>
+              <option value="average">Average</option>
+              <option value="good">Good</option>
+            </select>
+          </CSSTransition>
+          {premium && (
+            <div className={styles.calculatorResult}>
+              Estimated Monthly Premium: ${premium}
+            </div>
+          )}
+          <button onClick={calculatePremium} className={styles.calculatorButton}>
             Calculate Premium
           </button>
         </div>
-        {premium && (
-          <div className={styles.calculatorResult}>
-            Estimated Monthly Premium: ${premium}
-          </div>
-        )}
       </section>
     </section>
   );
 }
+
+

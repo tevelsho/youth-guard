@@ -2,8 +2,10 @@
 
 import React from "react";
 import Navbar from "@/app/ui/navbar";
-import "./globals.css";
 import Chatbot from "@/app/chatbot/chatbot";
+import Footer from "@/app/ui/footer";
+
+import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
@@ -19,6 +21,7 @@ export default function RootLayout({ children }) {
           <Navbar />
           {children}
             <Chatbot />
+            <Footer />
         </div>
       </body>
     </html>

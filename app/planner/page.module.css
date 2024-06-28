@@ -66,12 +66,14 @@
 }
 
 .calculatorContainer {
+  align-self: flex-start;
   margin: 2rem auto;
   padding: 2rem;
-  width: 80%;
-  background: linear-gradient(135deg, #f9f9f9, #eaeaea);
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 23%;
+  background: #f9fafd;
+  border-radius: 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  
 }
 
 .calculatorTitle {
@@ -79,7 +81,7 @@
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #383a54;
 }
 
 .calculatorForm {
@@ -90,17 +92,33 @@
 
 .calculatorInput,
 .calculatorSelect {
-  padding: 0.75rem;
+  padding: 1.25rem;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.25rem;
-  transition: border-color 0.3s;
+  border-color:#aaaaaa;
+  border-radius: 0.8rem;
+  margin-right: 1rem;
+}
+
+.calculatorSelect {
+  width: 100%;
+  padding: 1.25rem;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid #ddd;
+}
+
+.calculatorInput {
+  width: 87%;
+  padding: 1.25rem;
+  font-size: 1rem;
+  border-radius: 0.8rem;
+  border: 1px solid #ddd;
 }
 
 .calculatorInput:focus,
 .calculatorSelect:focus {
-  border-color: #ea1e2e;
   outline: none;
+  
 }
 
 .calculatorSelect {
@@ -113,15 +131,16 @@
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  background-color: #ea1e2e;
+  background-color: #383a54;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin-top: 2rem;
 }
 
 .calculatorButton:hover {
-  background-color: #d81a26;
+  background-color: #34364d;
 }
 
 .calculatorResult {
@@ -132,52 +151,22 @@
   color: #333;
 }
 
-@media (min-width: 768px) {
-  .calculatorForm {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .calculatorInput,
-  .calculatorSelect {
-    flex: 1 1 calc(50% - 1rem);
-    margin-right: 1rem;
-  }
-
-  .calculatorInput:last-of-type,
-  .calculatorSelect:last-of-type {
-    margin-right: 0;
-  }
-
-  .calculatorButton {
-    flex: 1 1 100%;
-  }
+.fade-enter {
+  opacity: 0;
 }
 
-
-.calculatorSelect {
-  padding: 0.75rem;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 0.25rem;
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
 }
 
-.calculatorButton {
-  padding: 0.75rem;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
-  background-color: #ea1e2e;
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
+.fade-exit {
+  opacity: 1;
 }
 
-.calculatorResult {
-  margin-top: 1.5rem;
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: bold;
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
 }
 
 .testHeader {
