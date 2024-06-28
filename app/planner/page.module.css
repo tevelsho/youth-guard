@@ -24,7 +24,7 @@
 .infoContainer {
   display: flex;
   flex-wrap: wrap; 
-  justify-content: center; /* Center the flex items */
+  justify-content: center; 
   width: 90%;
   margin-top: 20px;
 }
@@ -149,6 +149,45 @@
   font-size: 1.5rem;
   font-weight: bold;
   color: #333;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+.calculatorContainer {
+  align-self: flex-start;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 23%;
+  background: #f9fafd;
+  border-radius: 3rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease-in-out;
+}
+
+.errorText {
+  color: red;
+  margin-top: 1rem;
+  text-align: center;
 }
 
 .fade-enter {

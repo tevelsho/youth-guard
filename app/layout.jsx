@@ -2,7 +2,6 @@ import React from "react";
 import Navbar from "@/app/ui/navbar";
 import Chatbot from "@/app/chatbot/chatbot";
 import Footer from "@/app/ui/footer";
-
 import "./globals.css";
 
 export default function RootLayout({ children }) {
@@ -18,9 +17,9 @@ export default function RootLayout({ children }) {
         <div>
           <Navbar />
           {children}
-          <Chatbot />
+          <Chatbot/>
         </div>
-        <Footer className="footer" />
+        <Footer/>
       </body>
     </html>
   );

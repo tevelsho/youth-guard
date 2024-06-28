@@ -15,6 +15,8 @@ export default function Planner() {
   const [insuranceType, setInsuranceType] = useState("");
   const [insurancePlan, setInsurancePlan] = useState("");
   const [premium, setPremium] = useState(null);
+  const [shake, setShake] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const calculatePremium = () => {
     if (
@@ -47,8 +49,12 @@ export default function Planner() {
         healthFactor;
 
       setPremium(estimatedPremium.toFixed(2));
+      setErrorMessage("");
     } else {
       setPremium(null);
+      setErrorMessage("Please fill out all fields!");
+      setShake(true);
+      setTimeout(() => setShake(false), 500); 
     }
   };
 
@@ -107,7 +113,7 @@ export default function Planner() {
         </div>
       </section>
 
-      <section className={styles.calculatorContainer}>
+      <section className={`${styles.calculatorContainer} ${shake ? styles.shake : ""}`}>
         <h2 className={styles.calculatorTitle}>Insurance Calculator</h2>
         <div className={styles.calculatorForm}>
           <input
@@ -192,10 +198,12 @@ export default function Planner() {
           <button onClick={calculatePremium} className={styles.calculatorButton}>
             Calculate Premium
           </button>
+          {errorMessage && <div className={styles.errorText}>{errorMessage}</div>}
         </div>
       </section>
     </section>
   );
 }
+
 
 
