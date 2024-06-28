@@ -1,8 +1,10 @@
 .box {
+    position: relative;
     padding: 2% 2.5%;
     background: #1f1f1f;
     bottom: 0;
     width: 95%;
+    z-index: 1;
   }
   
   .footerContainer {
