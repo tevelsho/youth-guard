@@ -186,6 +186,68 @@
   transition: transform 0.5s ease-in-out;
 }
 
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.sliderLabel {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.numberInput {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.slider {
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+  background: #ddd;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ea1e2e;
+  border-color: #ea1e2e;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ea1e2e;
+  border-color: #ea1e2e;
+  cursor: pointer;
+}
+
+.errorText {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+}
+
 .errorText {
   color: red;
   margin-top: 1rem;

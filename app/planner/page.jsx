@@ -7,9 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Planner() {
-  const [age, setAge] = useState("");
-  const [coverage, setCoverage] = useState("");
-  const [duration, setDuration] = useState("");
+  const [age, setAge] = useState(30);
+  const [coverage, setCoverage] = useState(100000);
+  const [duration, setDuration] = useState(10);
   const [smokingStatus, setSmokingStatus] = useState("");
   const [healthStatus, setHealthStatus] = useState("");
   const [insuranceType, setInsuranceType] = useState("");
@@ -77,7 +77,7 @@ export default function Planner() {
             </div>
             <div className={styles.infoText}>
               <h3>Insurance Personality Test</h3>
-              <p>Some info</p>
+              <p>Discover the perfect insurance plan tailored just for you!</p>
             </div>
           </div>
         </Link>
@@ -93,7 +93,7 @@ export default function Planner() {
             </div>
             <div className={styles.infoText}>
               <h3>Health Insurance Personality Test</h3>
-              <p>Some info.</p>
+              <p>Find the perfect health insurance plan personalized for your needs!</p>
             </div>
           </div>
         </Link>
@@ -107,8 +107,8 @@ export default function Planner() {
             />
           </div>
           <div className={styles.infoText}>
-            <h3>PRUPanel Connect</h3>
-            <p>A suite of value-added services to make your healthcare journey simpler.</p>
+            <h3>Some Other Test</h3>
+            <p>A suite of tests.</p>
           </div>
         </div>
       </section>
@@ -116,27 +116,65 @@ export default function Planner() {
       <section className={`${styles.calculatorContainer} ${shake ? styles.shake : ""}`}>
         <h2 className={styles.calculatorTitle}>Insurance Calculator</h2>
         <div className={styles.calculatorForm}>
-          <input
-            type="number"
-            placeholder="Enter your age"
-            className={styles.calculatorInput}
-            value={age}
-            onChange={(e) => setAge(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Enter desired coverage amount"
-            className={styles.calculatorInput}
-            value={coverage}
-            onChange={(e) => setCoverage(e.target.value)}
-          />
-          <input
-            type="number"
-            placeholder="Enter coverage duration (years)"
-            className={styles.calculatorInput}
-            value={duration}
-            onChange={(e) => setDuration(e.target.value)}
-          />
+          <div className={styles.sliderContainer}>
+            <label className={styles.sliderLabel}>Age</label>
+            <input
+              type="number"
+              min="0"
+              max="100"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              className={styles.numberInput}
+            />
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value={age}
+              onChange={(e) => setAge(e.target.value)}
+              className={styles.slider}
+            />
+          </div>
+          <div className={styles.sliderContainer}>
+            <label className={styles.sliderLabel}>Coverage Amount</label>
+            <input
+              type="number"
+              min="5000"
+              max="500000"
+              step="5000"
+              value={coverage}
+              onChange={(e) => setCoverage(e.target.value)}
+              className={styles.numberInput}
+            />
+            <input
+              type="range"
+              min="5000"
+              max="500000"
+              step="5000"
+              value={coverage}
+              onChange={(e) => setCoverage(e.target.value)}
+              className={styles.slider}
+            />
+          </div>
+          <div className={styles.sliderContainer}>
+            <label className={styles.sliderLabel}>Coverage Duration</label>
+            <input
+              type="number"
+              min="1"
+              max="30"
+              value={duration}
+              onChange={(e) => setDuration(e.target.value)}
+              className={styles.numberInput}
+            />
+            <input
+              type="range"
+              min="1"
+              max="30"
+              value={duration}
+              onChange={(e) => setDuration(e.target.value)}
+              className={styles.slider}
+            />
+          </div>
           <select
             className={styles.calculatorSelect}
             value={smokingStatus}
