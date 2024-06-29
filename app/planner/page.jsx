@@ -158,22 +158,11 @@ export default function Planner() {
           </div>
           <div className={styles.sliderContainer}>
             <label className={styles.sliderLabel}>Coverage Duration</label>
-            <input
-              type="number"
-              min="1"
-              max="30"
-              value={duration}
-              onChange={(e) => setDuration(e.target.value)}
-              className={styles.numberInput}
-            />
-            <input
-              type="range"
-              min="1"
-              max="30"
-              value={duration}
-              onChange={(e) => setDuration(e.target.value)}
-              className={styles.slider}
-            />
+            <section className={styles.buttonContainer}>
+            <button className={styles.buttonObject} type= "number" value = {5} onClick={(e)=> setDuration(e.target.value)} >5</button>
+            <button className={styles.buttonObject} type= "number" value = {10} onClick={(e)=> setDuration(e.target.value)} >10</button>
+            <button className={styles.buttonObject} type= "number" value = {20} onClick={(e)=> setDuration(e.target.value)} >20</button>
+            </section>
           </div>
           <select
             className={styles.calculatorSelect}
