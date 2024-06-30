@@ -2,15 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
-  height: auto;
-  padding-top: 100px;
+  max-width: 1200px;
+  margin: 20px 0;
 }
 
 .game {
   width: 100%;
   display: flex;
   justify-content: center;
+  border-radius: 5px;
+  margin-top: 40px;
 }
 
 .rectangle {
@@ -66,15 +74,13 @@
 }
 
 .calculatorContainer {
-  position: relative;
-  right: 30%;
   align-self: flex-start;
-  margin: 2rem auto;
   padding: 2rem;
-  width: 23%;
+  width: 26%;
   background: #f9fafd;
   border-radius: 3rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s ease-in-out;
 }
 
 .calculatorTitle {
@@ -95,7 +101,7 @@
 .calculatorSelect {
   padding: 1.25rem;
   font-size: 1rem;
-  border-color:#aaaaaa;
+  border-color: #aaaaaa;
   border-radius: 0.8rem;
   margin-right: 1rem;
 }
@@ -119,7 +125,6 @@
 .calculatorInput:focus,
 .calculatorSelect:focus {
   outline: none;
-  
 }
 
 .calculatorSelect {
@@ -172,17 +177,6 @@
 
 .shake {
   animation: shake 0.5s;
-}
-
-.calculatorContainer {
-  align-self: flex-start;
-  margin: 2rem auto;
-  padding: 2rem;
-  width: 23%;
-  background: #f9fafd;
-  border-radius: 3rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transition: transform 0.5s ease-in-out;
 }
 
 .sliderContainer {
@@ -241,16 +235,10 @@
   cursor: pointer;
 }
 
-.errorText {
+.errorMessage {
   color: red;
   font-size: 0.875rem;
   margin-top: 0.5rem;
-}
-
-.errorText {
-  color: red;
-  margin-top: 1rem;
-  text-align: center;
 }
 
 .fade-enter {
@@ -368,6 +356,7 @@
 .startTest:hover {
   background-color: #9C1425;
 }
+
 .buttonContainer{
   display : flex;
   justify-content: space-between;
@@ -398,4 +387,12 @@
   color: white;
   background-color: #ea1e2e;
   border-color:#ea1e2e;
+}
+
+
+
+.chartContainer {
+  margin: 20px auto;
+  margin-left: 40px;
+  width: 65%;
 }
