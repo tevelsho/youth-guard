@@ -359,9 +359,11 @@
 
 .buttonContainer{
   display : flex;
-  justify-content: space-between;
+  justify-content:center;
+  justify-items: flex-end;
+  flex-direction: row;
   padding: 0.5rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   gap:2rem;
 }
 .buttonObject{
@@ -383,12 +385,16 @@
   background-color:#ccc;
 }
 
-.buttonObject:focus {
+.buttonObject:focus{
   color: white;
   background-color: #ea1e2e;
   border-color:#ea1e2e;
 }
 
+.buttonLabel{
+  display: flex;
+  justify-content: center;
+}
 
 
 .chartContainer {

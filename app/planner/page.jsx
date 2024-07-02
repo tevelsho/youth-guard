@@ -9,6 +9,7 @@ import Link from "next/link";
 
 export default function Planner() {
   const [age, setAge] = useState(30);
+  const [status, setStatus] = useState("")
   const [coverage, setCoverage] = useState(100000);
   const [duration, setDuration] = useState(10);
   const [smokingStatus, setSmokingStatus] = useState("");
@@ -176,8 +177,29 @@ export default function Planner() {
                 className={styles.slider}
               />
             </div>
-            <div className={styles.sliderContainer}>
-              <label className={styles.sliderLabel}>Coverage Duration</label>
+            <div>
+              <label className={styles.buttonLabel}>Are you a Singapore Citizen or PR?</label>
+              <section className={styles.buttonContainer}>
+              <button
+                  className={styles.buttonObject}
+                  type="button"
+                  value="Yes"
+                  onClick={(e) => setStatus(e.target.value)}
+                >
+                  Yes
+                </button>
+                <button
+                  className={styles.buttonObject}
+                  type="button"
+                  value="No"
+                  onClick={(e) => setStatus(e.target.value)}
+                >
+                  No
+                </button>
+                </section>
+            </div>
+            <div>
+              <label className={styles.buttonLabel}>Coverage Duration</label>
               <section className={styles.buttonContainer}>
                 <button
                   className={styles.buttonObject}
