@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import styles from "./page.module.css";
@@ -518,9 +518,10 @@ export default function Planner() {
               PRUShieldPremierForeignersType2
               </option>
             </select>
-            <button className={styles.calculatorButton} onClick={calcPremium()}>
+            <button className={styles.calculatorButton} onClick={calcPremium}>
               Calculate Premium
             </button>
+            
             {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
             {premium && <p className={styles.premiumResult}>Estimated Premium: ${}</p>}
           </div>
