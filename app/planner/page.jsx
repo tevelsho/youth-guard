@@ -15,7 +15,7 @@ export default function Planner() {
   const [smokingStatus, setSmokingStatus] = useState("");
   const [healthStatus, setHealthStatus] = useState("");
   const [insuranceType, setInsuranceType] = useState("");
-  const [insurancePlan, setInsurancePlan] = useState("PRUShieldPremier");
+  const [insurancePlan, setInsurancePlan] = useState("");
   const [premium, setPremium] = useState(null);
   const [shake, setShake] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
@@ -29,61 +29,26 @@ export default function Planner() {
     covid: ["COVID Plan A", "COVID Plan B"],
   };
   const calcPremium = () => {
+    if(insurancePlan !== ""){
     const dataset = pdfData[insurancePlan];
-      console.log("I AM HERE" + insurancePlan);
+      console.log(insurancePlan);
     for(let i = 0; i <= dataset.length; i++){
       if(age >= dataset[i].ageRange[0] && age <= dataset[i].ageRange[1]){
         const prem = dataset[i].premium;
-        const withdraw = dataset[i].withdrawalLimit;
+        if (dataset[i].withdrawalLimit != null){
+          setWithdrawLimit("0.00");
+        }else{
+          setWithdrawLimit(dataset[i].withdrawalLimit);
+        }
         setPremium(prem);
-        setWithdrawLimit(withdraw);
         break;
-    }else{
-      setPremium(null);
+    }}
+  }else{
+    setPremium(null);
       setErrorMessage("Please fill out all fields!");
       setShake(true);
       setTimeout(() => setShake(false), 500);
-    }
   }};
-  const calculatePremium = () => {
-    if (
-      age &&
-      coverage &&
-      duration &&
-      smokingStatus &&
-      healthStatus &&
-      insuranceType &&
-      insurancePlan
-    ) {
-      const basePremium = 100;
-      const ageFactor = age * 1.5;
-      const coverageFactor = coverage / 1000;
-      const durationFactor = duration * 0.1;
-      const smokingFactor = smokingStatus === "smoker" ? 200 : 0;
-      const healthFactor =
-        healthStatus === "poor"
-          ? 150
-          : healthStatus === "average"
-          ? 100
-          : 50;
-
-      const estimatedPremium =
-        basePremium +
-        ageFactor +
-        coverageFactor +
-        durationFactor +
-        smokingFactor +
-        healthFactor;
-
-      setPremium(estimatedPremium.toFixed(2));
-      setErrorMessage("");
-    } else {
-      setPremium(null);
-      setErrorMessage("Please fill out all fields!");
-      setShake(true);
-      setTimeout(() => setShake(false), 500);
-    }
-  };
 
   const data = [
     { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },
@@ -521,9 +486,8 @@ export default function Planner() {
             <button className={styles.calculatorButton} onClick={calcPremium}>
               Calculate Premium
             </button>
-            
             {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
-            {premium && <p className={styles.premiumResult}>Estimated Premium: ${}</p>}
+            {premium && <p className={styles.premiumResult}>Estimated Premium: ${premium} <br/>Withdrawal Limit: ${withdrawLimit}</p>}
           </div>
         </div>
 
