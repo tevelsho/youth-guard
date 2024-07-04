@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { CSSTransition } from "react-transition-group";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import styles from "./page.module.css";
@@ -15,10 +15,11 @@ export default function Planner() {
   const [smokingStatus, setSmokingStatus] = useState("");
   const [healthStatus, setHealthStatus] = useState("");
   const [insuranceType, setInsuranceType] = useState("");
-  const [insurancePlan, setInsurancePlan] = useState("");
+  const [insurancePlan, setInsurancePlan] = useState("PRUShieldPremier");
   const [premium, setPremium] = useState(null);
   const [shake, setShake] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
+  const [withdrawLimit, setWithdrawLimit] = useState("");
 
   const insurancePlans = {
     medical: ["Basic Plan", "Standard Plan", "Premium Plan"],
@@ -27,7 +28,23 @@ export default function Planner() {
     dengue: ["Dengue Plan A", "Dengue Plan B"],
     covid: ["COVID Plan A", "COVID Plan B"],
   };
-
+  const calcPremium = () => {
+    const dataset = pdfData[insurancePlan];
+      console.log("I AM HERE" + insurancePlan);
+    for(let i = 0; i <= dataset.length; i++){
+      if(age >= dataset[i].ageRange[0] && age <= dataset[i].ageRange[1]){
+        const prem = dataset[i].premium;
+        const withdraw = dataset[i].withdrawalLimit;
+        setPremium(prem);
+        setWithdrawLimit(withdraw);
+        break;
+    }else{
+      setPremium(null);
+      setErrorMessage("Please fill out all fields!");
+      setShake(true);
+      setTimeout(() => setShake(false), 500);
+    }
+  }};
   const calculatePremium = () => {
     if (
       age &&
@@ -281,7 +298,6 @@ export default function Planner() {
       { ageRange: [96, 100], premium: 1820.00, withdrawalLimit: null }
     ]
   };
-  
   return (
     <section className={styles.plannerContainer}>
       <section className={styles.game}>
@@ -470,18 +486,43 @@ export default function Planner() {
               value={insurancePlan}
               onChange={(e) => setInsurancePlan(e.target.value)}
             >
-              <option value="">Select Insurance Plan</option>
-              {insurancePlans[insuranceType]?.map((plan) => (
-                <option key={plan} value={plan}>
-                  {plan}
+              <option value = "">Select Insurance Plan</option>
+                <option value = "PRUShieldPremier">
+                  PRUShieldPremier
                 </option>
-              ))}
+                <option value = "PRUShieldPlus">
+                PRUShieldPlus
+              </option>
+              <option value = "PRUShieldStandard">
+                PRUShieldStandard
+              </option>
+              <option value = "PRUShieldExtraPremierCoPay">
+                PRUShieldExtraPremierCoPay
+              </option>
+              <option value = "PRUShieldExtraPreferredCoPay">
+              PRUShieldExtraPreferredCoPay
+              </option>
+              <option value = "PRUShieldExtraPremierLiteCoPay">
+              PRUShieldExtraPremierLiteCoPay
+              </option>
+              <option value = "PRUExtraPlusCoPay">
+              PRUExtraPlusCoPay
+              </option>
+              <option value = "PRUExtraPlusLiteCoPay">
+              PRUExtraPlusLiteCoPay
+              </option>
+              <option value = "PRUShieldPremierForeignersType1">
+              PRUShieldPremierForeignersType1
+              </option>
+              <option value = "PRUShieldPremierForeignersType2">
+              PRUShieldPremierForeignersType2
+              </option>
             </select>
-            <button className={styles.calculatorButton} onClick={calculatePremium}>
+            <button className={styles.calculatorButton} onClick={calcPremium()}>
               Calculate Premium
             </button>
             {errorMessage && <p className={styles.errorMessage}>{errorMessage}</p>}
-            {premium && <p className={styles.premiumResult}>Estimated Premium: ${premium}</p>}
+            {premium && <p className={styles.premiumResult}>Estimated Premium: ${}</p>}
           </div>
         </div>
 
