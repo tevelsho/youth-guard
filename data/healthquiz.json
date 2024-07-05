@@ -1,18 +1,128 @@
 {
     "Health": [
-        {
-            "question": "How often do you visit the doctor?",
-            "options": ["Rarely", "Once a year", "Multiple times a year"]
-        },
-        {
-            "question": "Do you have any pre-existing conditions?",
-            "options": ["Yes", "No"]
-        }
-    ],
-    "Life": {
-
+    {
+      "question": "When it comes to choosing a health insurance plan, what is your primary consideration?",
+      "options": [
+        "I prefer the most comprehensive coverage, even if it costs more.",
+        "I look for a balance between coverage and affordability.",
+        "I choose the cheapest plan available to save money."
+      ]
     },
-    "Wealth": {
-        
+    {
+      "question": "How do you react to unexpected medical expenses?",
+      "options": [
+        "I feel secure knowing my insurance will cover most of the costs.",
+        "I am somewhat prepared but worry about the impact on my savings.",
+        "I panic because I have little to no coverage."
+      ]
+    },
+    {
+      "question": "What is your approach to preventive health measures?",
+      "options": [
+        "I regularly go for check-ups and use my insurance for preventive care.",
+        "I go for check-ups occasionally, depending on my health needs.",
+        "I rarely go for check-ups unless absolutely necessary."
+      ]
+    },
+    {
+      "question": "How do you feel about paying insurance premiums?",
+      "options": [
+        "I see it as a necessary investment for my peace of mind.",
+        "I understand its importance but find it a bit burdensome.",
+        "I consider it an unnecessary expense and try to avoid it."
+      ]
+    },
+    {
+      "question": "When faced with a choice between two insurance plans, how do you decide?",
+      "options": [
+        "I thoroughly research and compare all aspects of the plans.",
+        "I consult with friends or family who have experience with insurance.",
+        "I go with my gut feeling or choose randomly."
+      ]
     }
+    ],
+    "Life": [
+    {
+      "question": "When considering life insurance, what is your primary motivation?",
+      "options": [
+        "Ensuring my family is financially secure if something happens to me.",
+        "Having a safety net but also considering the cost.",
+        "I’m unsure if life insurance is necessary at all."
+      ]
+    },
+    {
+      "question": "How do you plan for your family's future financially?",
+      "options": [
+        "I actively invest in various plans, including life insurance.",
+        "I have some savings and investments but nothing too elaborate.",
+        "I mostly live in the present and rarely think about long-term financial planning."
+      ]
+    },
+    {
+      "question": "What is your approach to discussing life insurance with loved ones?",
+      "options": [
+        "I have open and detailed discussions about the benefits and coverage.",
+        "I mention it occasionally but avoid lengthy conversations.",
+        "I find it uncomfortable and rarely bring it up."
+      ]
+    },
+    {
+      "question": "How do you feel about the long-term commitment required for life insurance?",
+      "options": [
+        "I am comfortable with it and see it as a crucial part of my financial planning.",
+        "I have some concerns but understand its importance.",
+        "I find it daunting and prefer short-term solutions."
+      ]
+    },
+    {
+      "question": "When selecting a life insurance policy, what do you prioritize?",
+      "options": [
+        "Comprehensive coverage and high benefits for my beneficiaries.",
+        "A balance between good coverage and reasonable premiums.",
+        "The lowest premium, regardless of the coverage."
+      ]
+    }
+    ],
+    "Wealth": [
+    {
+      "question": "How do you approach saving money?",
+      "options": [
+        "I regularly save a significant portion of my income and invest it wisely.",
+        "I save when I can, but I also like to enjoy my money.",
+        "I find it difficult to save and usually spend most of what I earn."
+      ]
+    },
+    {
+      "question": "What is your investment strategy?",
+      "options": [
+        "I diversify my investments across different asset classes for balanced growth.",
+        "I invest in a few areas I’m familiar with and trust.",
+        "I rarely invest and prefer keeping my money in a savings account."
+      ]
+    },
+    {
+      "question": "How do you handle financial risks?",
+      "options": [
+        "I take calculated risks to maximize my returns.",
+        "I am cautious and prefer low-risk investments.",
+        "I avoid taking any financial risks and prefer safe options."
+      ]
+    },
+    {
+      "question": "What is your approach to financial planning?",
+      "options": [
+        "I have a detailed financial plan and regularly review it.",
+        "I have a basic plan but don’t stick to it strictly.",
+        "I don’t have a formal financial plan and manage finances as they come."
+      ]
+    },
+    {
+      "question": "When it comes to spending money, how would you describe yourself?",
+      "options": [
+        "I am frugal and prioritize saving and investing over spending.",
+        "I balance my spending and saving habits.",
+        "I am a spender and often indulge in my desires."
+      ]
+    }
+  ]
 }
