@@ -1,7 +1,14 @@
 {
-    "Health": {
-
-    },
+    "Health": [
+        {
+            "question": "How often do you visit the doctor?",
+            "options": ["Rarely", "Once a year", "Multiple times a year"]
+        },
+        {
+            "question": "Do you have any pre-existing conditions?",
+            "options": ["Yes", "No"]
+        }
+    ],
     "Life": {
 
     },

@@ -265,11 +265,25 @@ export default function Planner() {
   };
   return (
     <section className={styles.plannerContainer}>
-      <section className={styles.game}>
-        <div className={styles.rectangle}></div>
-      </section>
+      
 
       <section className={styles.infoContainer}>
+        <Link href="/planner/game" className={styles.infoBox}>
+          <div>
+            <div className={styles.infoImageContainer}>
+              <Image
+                src="/game.png"
+                alt="policy"
+                layout="fill"
+                className={styles.infoImage}
+              />
+            </div>
+            <div className={styles.infoText}>
+              <h3>Play our life simulator!</h3>
+              <p>Discover the effectiveness of an insurance plan!</p>
+            </div>
+          </div>
+        </Link>
         <Link href="/planner/healthtest" className={styles.infoBox}>
           <div>
             <div className={styles.infoImageContainer}>
