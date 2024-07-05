@@ -51,14 +51,16 @@ export default function Planner() {
   }};
 
   const data = [
-    { name: 'Page A', uv: 4000, pv: 2400, amt: 2400 },
-    { name: 'Page B', uv: 3000, pv: 1398, amt: 2210 },
-    { name: 'Page C', uv: 2000, pv: 9800, amt: 2290 },
-    { name: 'Page D', uv: 2780, pv: 3908, amt: 2000 },
-    { name: 'Page E', uv: 1890, pv: 4800, amt: 2181 },
-    { name: 'Page F', uv: 2390, pv: 3800, amt: 2500 },
-    { name: 'Page G', uv: 3490, pv: 4300, amt: 2100 },
+    { year: 1, premiums: 500, payouts: 0, savings: 0 },
+    { year: 2, premiums: 1000, payouts: 2000, savings: 1500 },
+    { year: 3, premiums: 1500, payouts: 0, savings: 0 },
+    { year: 4, premiums: 2000, payouts: 3000, savings: 2500 },
+    { year: 5, premiums: 2500, payouts: 0, savings: 0 },
+    { year: 10, premiums: 5000, payouts: 5000, savings: 4500 },
+    { year: 15, premiums: 7500, payouts: 7000, savings: 6000 },
+    { year: 20, premiums: 10000, payouts: 10000, savings: 9500 },
   ];
+  
   const pdfData = {
     PRUShieldPremier: [
       { ageRange: [1, 20], premium: 147.71, withdrawalLimit: 300 },
@@ -272,7 +274,7 @@ export default function Planner() {
           <div>
             <div className={styles.infoImageContainer}>
               <Image
-                src="/game.png"
+                src="/sims.png"
                 alt="policy"
                 layout="fill"
                 className={styles.infoImage}
@@ -316,20 +318,6 @@ export default function Planner() {
             </div>
           </div>
         </Link>
-        <div className={styles.infoBox}>
-          <div className={styles.infoImageContainer}>
-            <Image
-              src="/youthInsurance.jpg"
-              alt="youth insurance"
-              layout="fill"
-              className={styles.infoImage}
-            />
-          </div>
-          <div className={styles.infoText}>
-            <h3>Some Other Test</h3>
-            <p>A suite of tests.</p>
-          </div>
-        </div>
       </section>
 
       <section className={styles.mainContent}>
@@ -506,18 +494,20 @@ export default function Planner() {
         </div>
 
         <div className={styles.chartContainer}>
-          <ResponsiveContainer width="100%" height={400}>
-            <LineChart data={data}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip />
-              <Legend />
-              <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-              <Line type="monotone" dataKey="pv" stroke="#82ca9d" />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+  <ResponsiveContainer width="100%" height={400}>
+    <LineChart data={data}>
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="year" />
+      <YAxis />
+      <Tooltip />
+      <Legend />
+      <Line type="monotone" dataKey="premiums" stroke="#8884d8" />
+      <Line type="monotone" dataKey="payouts" stroke="#82ca9d" />
+      <Line type="monotone" dataKey="savings" stroke="#ffc658" />
+    </LineChart>
+  </ResponsiveContainer>
+</div>
+
       </section>
     </section>
   );
