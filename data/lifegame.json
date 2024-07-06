@@ -1,0 +1,94 @@
+{
+    "chapters": [
+      {
+        "title": "Starting Out",
+        "scenario": "First Job",
+        "decision": "Health Insurance",
+        "options": [
+          {
+            "option": "Purchase a basic health insurance plan.",
+            "outcome": "Peace of mind; medical costs covered during a minor accident."
+          },
+          {
+            "option": "Skip health insurance to save money.",
+            "outcome": "Major financial setback after an unexpected illness."
+          }
+        ]
+      },
+      {
+        "title": "On the Road",
+        "scenario": "Buying Your First Car",
+        "decision": "Auto Insurance",
+        "options": [
+          {
+            "option": "Get comprehensive auto insurance.",
+            "outcome": "Covered damages from a minor accident; small premium costs."
+          },
+          {
+            "option": "Only buy mandatory liability insurance.",
+            "outcome": "High out-of-pocket repair costs after a significant accident."
+          }
+        ]
+      },
+      {
+        "title": "Building a Home",
+        "scenario": "Renting an Apartment",
+        "decision": "Renters Insurance",
+        "options": [
+          {
+            "option": "Invest in renters insurance.",
+            "outcome": "Protection against theft; stolen items replaced."
+          },
+          {
+            "option": "Skip renters insurance.",
+            "outcome": "Loss of valuables after a burglary, with no reimbursement."
+          }
+        ]
+      },
+      {
+        "title": "Family and Health",
+        "scenario": "Growing Family",
+        "decision": "Family Health Plan",
+        "options": [
+          {
+            "option": "Upgrade to a family health insurance plan.",
+            "outcome": "Coverage for unexpected medical expenses; financial stability."
+          },
+          {
+            "option": "Stick with individual insurance.",
+            "outcome": "Strain on finances due to child’s medical emergency."
+          }
+        ]
+      },
+      {
+        "title": "Preparing for the Unexpected",
+        "scenario": "Natural Disaster",
+        "decision": "Homeowners Insurance",
+        "options": [
+          {
+            "option": "Invest in comprehensive homeowners insurance.",
+            "outcome": "Coverage of repairs after a storm; minimal financial impact."
+          },
+          {
+            "option": "No homeowners insurance.",
+            "outcome": "Severe financial loss; home repairs are a major burden."
+          }
+        ]
+      },
+      {
+        "title": "Retirement Planning",
+        "scenario": "Approaching Retirement",
+        "decision": "Long-Term Care Insurance",
+        "options": [
+          {
+            "option": "Purchase long-term care insurance.",
+            "outcome": "Security in retirement; care costs covered."
+          },
+          {
+            "option": "Forego long-term care insurance.",
+            "outcome": "Financial struggle with high medical and care expenses."
+          }
+        ]
+      }
+    ]
+}
