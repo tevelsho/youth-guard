@@ -493,7 +493,22 @@ export default function Planner() {
           </div>
         </div>
 
-        <div className={styles.chartContainer}>
+        <section className={styles.chartContainer}>
+        <div className={styles.chartTitle}>How Your Insurance Investment Grows Over Time</div>
+        <p className={styles.chartDescription}>
+          Imagine starting a small savings habit today that grows into something much bigger in the future. That’s what investing in insurance does for you!
+        </p>
+        <p className={styles.chartDescription}>
+          <strong>Here’s how it works:</strong>
+        </p>
+        <ul className={styles.scenarioList}>
+          <li><strong>Year 1:</strong> You start by investing $100 in insurance premiums. At the end of the year, you receive $50 in payouts and have $10 in savings.</li>
+          <li><strong>Year 2:</strong> You continue to invest, bringing your total to $200 in premiums. Your payouts increase to $150, and your savings grow to $30.</li>
+          <li><strong>Year 3:</strong> Your consistent investment of $300 in premiums results in $250 in payouts and $60 in savings.</li>
+        </ul>
+        <p className={styles.chartDescription}>
+          <strong>The longer you invest, the more you benefit!</strong> This graph shows how your initial premiums lead to increasing payouts and savings over time. By starting early and staying committed, you secure more significant rewards in the future.
+        </p>
   <ResponsiveContainer width="100%" height={400}>
     <LineChart data={data}>
       <CartesianGrid strokeDasharray="3 3" />
@@ -506,7 +521,7 @@ export default function Planner() {
       <Line type="monotone" dataKey="savings" stroke="#ffc658" />
     </LineChart>
   </ResponsiveContainer>
-</div>
+</section>
 
       </section>
     </section>

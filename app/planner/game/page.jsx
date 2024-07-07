@@ -61,57 +61,67 @@ const scenarios = [
     }
   ];
 
-const Page = () => {
-  const [currentScenarioIndex, setCurrentScenarioIndex] = useState(0);
-  const [score, setScore] = useState(0);
-  const [showOutcome, setShowOutcome] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(null);
-
-  const handleOptionClick = (option) => {
-    setScore(score + option.points);
-    setSelectedOption(option);
-    setShowOutcome(true);
-  };
-
-  const handleNextClick = () => {
-    setShowOutcome(false);
-    setSelectedOption(null);
-    setCurrentScenarioIndex(currentScenarioIndex + 1);
-  };
-
-  const currentScenario = scenarios[currentScenarioIndex];
-
-  if (currentScenarioIndex >= scenarios.length) {
+  const Page = () => {
+    const [currentScenarioIndex, setCurrentScenarioIndex] = useState(0);
+    const [score, setScore] = useState(0);
+    const [showOutcome, setShowOutcome] = useState(false);
+    const [selectedOption, setSelectedOption] = useState(null);
+  
+    const handleOptionClick = (option) => {
+      setScore(score + option.points);
+      setSelectedOption(option);
+      setShowOutcome(true);
+    };
+  
+    const handleNextClick = () => {
+      setShowOutcome(false);
+      setSelectedOption(null);
+      setCurrentScenarioIndex(currentScenarioIndex + 1);
+    };
+  
+    const currentScenario = scenarios[currentScenarioIndex];
+  
+    if (currentScenarioIndex >= scenarios.length) {
+      return (
+        <div className={styles.container}>
+          <h1>Conclusion</h1>
+          <p>Your final score is: {score}</p>
+          <p>{score > 0 ? '🎉 You made wise decisions and ensured financial stability!' : '😞 You faced challenges due to lack of insurance.'}</p>
+          <button onClick={() => { setCurrentScenarioIndex(0); setScore(0); setShowOutcome(false); setSelectedOption(null); }} className={styles.optionButton}>
+            Retry Game
+          </button>
+          <Link href="/" className={styles.optionButton} style={{ marginTop: '10px', background: '#007bff' }}>
+            Go to Homepage
+          </Link>
+        </div>
+      );
+    }
+  
     return (
       <div className={styles.container}>
-        <h1>Conclusion</h1>
-        <p>Your final score is: {score}</p>
-        <p>{score > 0 ? 'You made wise decisions and ensured financial stability!' : 'You faced challenges due to lack of insurance.'}</p>
-        <button onClick={() => { setCurrentScenarioIndex(0); setScore(0); setShowOutcome(false); setSelectedOption(null); }} className={styles.optionButton}>
-            Retry Game
-        </button>
+        <h1>{currentScenario.chapter}</h1>
+        <p className={styles.paragraph}>{currentScenario.scenario}</p>
+        <h2 className={styles.decisionHeader}>{currentScenario.decision}</h2>
+        {!showOutcome ? (
+          currentScenario.options.map((option, index) => (
+            <button
+              key={index}
+              onClick={() => handleOptionClick(option)}
+              className={styles.optionButton}
+            >
+              {option.text}
+            </button>
+          ))
+        ) : (
+          <div className={styles.outcome}>
+            <p>{selectedOption.outcome}</p>
+            <button onClick={handleNextClick} className={styles.nextButton}>
+              Next Scenario
+            </button>
+          </div>
+        )}
       </div>
     );
-  }
-
-  return (
-    <div className={styles.container}>
-      <h1>{currentScenario.chapter}</h1>
-      <p className={styles.paragraph}>{currentScenario.scenario}</p>
-      <h2>{currentScenario.decision}</h2>
-      {currentScenario.options.map((option, index) => (
-        <button key={index} className={styles.optionButton} onClick={() => handleOptionClick(option)}>
-          {option.text}
-        </button>
-      ))}
-      {showOutcome && (
-        <div className={styles.outcome}>
-          <p>{selectedOption.outcome}</p>
-          <button onClick={handleNextClick} className={styles.nextButton}>Next</button>
-        </div>
-      )}
-    </div>
-  );
-};
-
-export default Page;
+  };
+  
+  export default Page;

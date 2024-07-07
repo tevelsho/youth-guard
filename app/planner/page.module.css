@@ -34,7 +34,7 @@
   flex-wrap: wrap; 
   justify-content: center; 
   width: 90%;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 .infoBox {
@@ -81,6 +81,7 @@
   border-radius: 3rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   transition: transform 0.5s ease-in-out;
+  margin-right: 40px;
 }
 
 .calculatorTitle {
@@ -396,9 +397,45 @@
   justify-content: center;
 }
 
-
 .chartContainer {
-  margin: 20px auto;
-  margin-left: 40px;
-  width: 65%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chartTitle {
+  font-size: 26px;
+  font-weight: 600;
+  color: #383a54;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.chartDescription {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.scenarioList {
+  list-style-type: none;
+  font-size: 16px;
+  color: #34495e;
+  line-height: 1.8;
+}
+
+.scenarioList li {
+  margin-bottom: 12px;
+}
+
+.scenarioList strong {
+  color: #383a54;
+}
+
+.ResponsiveContainer {
+  width: 100%;
+  height: 400px;
+  margin-top: 20px;
 }
