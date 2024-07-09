@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 
 export default function HealthInsuranceTestPage() {
     const [data, setData] = useState(null);
+    const [ selectedTopic, setSelectedTopic ] = useState("Health");
+    const [startTest, setStartTest] = useState(false);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -14,10 +16,6 @@ export default function HealthInsuranceTestPage() {
 
         fetchData();
     }, []);
-
-    const handleTopicClick = (category) => {
-        console.log(category)
-    }
 
     return (
         <div>
@@ -41,17 +39,38 @@ export default function HealthInsuranceTestPage() {
                     </div>
                 </div>
             </header>
-            <div className={styles.testContent}>
+            <div className={`${styles.testContent} ${startTest ? styles.hidden : ""}`}>
                 <h2>Which category are you looking at?</h2>
                 <div className={styles.testContentBtns}>
                     {data && Object.keys(data).map((category) => (
-                        <button key={category} className={styles.testContentTopic} onClick={handleTopicClick(category)}>
+                        <button key={category} className={`${styles.testContentTopic} ${selectedTopic === category ? styles.selectedTopic : ""}}`} onClick={() => setSelectedTopic(category)}>
                             {category}
                         </button>
                     ))}
                 </div>
-                <button className={styles.startTest}>
+                <button className={styles.startTest} onClick={() => setStartTest(true)}>
                     Start the Test
+                </button>
+            </div>
+
+            <div className={`${styles.testContent} ${startTest ? "" : styles.hidden}`}>
+                <h2>{selectedTopic}</h2>
+                <div className={styles.testQuestions}>
+                    {data && data[selectedTopic].map((question, index) => (
+                        <div key={index} className={styles.testQuestion}>
+                            <h3>{question.question}</h3>
+                            <div className={styles.testAnswers}>
+                                {question.options.map((answer, index) => (
+                                    <button key={index} className={styles.testAnswer}>
+                                        {answer}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <button className={styles.nextQuestion}>
+                    Next Question
                 </button>
             </div>
         </div>

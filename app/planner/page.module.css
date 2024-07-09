@@ -309,6 +309,9 @@
 .testContent {
   text-align: center;
   margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 10%;
+  margin-right: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -317,6 +320,7 @@
 
 .testContent h2 {
   margin: 10px 0;
+  font-size: 2rem;
 }
 
 .testContentBtns {
@@ -341,6 +345,10 @@
   color: white;
 }
 
+.selectedTopic {
+  background-color: #F66477;
+}
+
 .startTest {
   font-weight: bold;
   background-color: #F11834;
@@ -352,6 +360,10 @@
   cursor: pointer;
   transition: all 0.3s ease;
   width: fit-content;
+}
+
+.hidden {
+  display: none;
 }
 
 .startTest:hover {
@@ -438,4 +450,35 @@
   width: 100%;
   height: 400px;
   margin-top: 20px;
+}
+
+.testQuestions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.testAnswers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.testAnswer {
+  background-color: #F66477;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.testAnswer:hover {
+  background-color: #9a3d49; 
+  transform: scale(1.05); 
 }
