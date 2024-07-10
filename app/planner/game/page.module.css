@@ -1,91 +1,133 @@
-/* Page Container */
 .container {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(to right, #f0f2f5, #ffffff);
-  color: #333;
-  margin: 20px auto;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  max-width: 1080px;
-  position: relative;
-  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
   margin-top: 80px;
+  margin-bottom: 80px;
 }
 
-/* Paragraph Text */
-.paragraph {
+.progressBar {
+  margin: 20px 0;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: #003c6c;
+  transition: width 0.3s ease;
+}
+
+.chapterTitle {
+  font-size: 28px;
+  color: #003c6c;
+  margin-bottom: 10px;
+}
+
+.scenarioText {
   font-size: 18px;
   color: #333;
-  margin-bottom: 30px;
-  line-height: 1.6;
-  text-shadow: none;
-}
-
-/* Decision Header */
-.decisionHeader {
-  color: #007bff;
   margin-bottom: 20px;
 }
 
-/* Option Buttons */
+.decisionHeader {
+  font-size: 22px;
+  color: #002f5d;
+  margin-bottom: 15px;
+}
+
+.optionButtonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .optionButton {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 15px;
-  font-size: 18px;
-  cursor: pointer;
-  background: linear-gradient(to right, #007bff, #0056b3);
+  background: #003c6c;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .optionButton:hover {
-  background: linear-gradient(to right, #0056b3, #007bff);
-  transform: scale(1.02);
+  background: #002f5d;
 }
 
-/* Outcome Section */
 .outcome {
-  margin-top: 30px;
+  margin-top: 20px;
   padding: 20px;
-  border-radius: 10px;
-  background: #f8f9fa;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border: 2px solid #007bff;
+  background: #d1f7d1;
+  border-radius: 8px;
 }
 
-/* Next Button */
 .nextButton {
-  display: block;
-  width: 100%;
-  margin-top: 15px;
-  padding: 15px;
-  font-size: 18px;
-  cursor: pointer;
-  background: #28a745;
+  background: #003c6c;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background 0.3s ease, transform 0.3s ease;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .nextButton:hover {
-  background: #218838;
-  transform: scale(1.02);
+  background: #002f5d;
 }
 
-/* Animation for Scenario */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.conclusionTitle {
+  font-size: 28px;
+  color: #003c6c;
 }
 
-.container {
-  animation: fadeIn 1s ease-in-out;
+.conclusionText {
+  font-size: 22px;
+  color: #333;
 }
+
+.conclusionMessage {
+  font-size: 20px;
+  color: #003c6c;
+}
+
+.homeLink {
+  display: block;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #003c6c;
+}
+
+.homeLink:hover {
+  text-decoration: underline;
+}
+
+.retryButton {
+  background: #003c6c;
+  color: #fff;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 10px;
+}
+
+.retryButton:hover {
+  background: #002f5d;
+}
+
+
+
+
+
